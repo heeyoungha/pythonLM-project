@@ -22,3 +22,23 @@ python manage.py startapp helloapp
 - pythonLM/settings.py
 - pythonLM/urls.py
 ```
+# DRF 프로젝트 초기 설정
+```
+# 장고 REST Framework 패키지 설치
+pip install djangorestframework
+
+# 장고 프로젝트에 Django REST Framework 을 추가 
+- settings.py : INSTALLED_APPS에 "rest_framework" 추가
+
+# app 생성
+python manage.py startapp bookreview
+
+# 뷰 작성 (FBV)
+- views.py : @api_view(['GET']) 작성
+
+# URL 연결
+- urls.py : bookreview/hello_rest_api 함수 연결
+
+# 실행
+python manage.py runserver
+```
