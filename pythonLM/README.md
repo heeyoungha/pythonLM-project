@@ -1,4 +1,27 @@
 # 장고 설치 & hello world 띄우기
+
+## 📁 프로젝트 구조
+```
+pythonLM/ (프로젝트 루트)
+├── 📁 .git/                    # Git 저장소
+├── 📄 .gitignore              # Git 무시 파일
+├── 📁 .venv/                  # Python 가상환경
+└── 📁 pythonLM/               # 메인 프로젝트 폴더
+    ├── 📄 README.md           # 프로젝트 문서
+    ├── 📁 backend/            # Django 백엔드
+    │   ├── 📁 bookreview/     # Django 앱 (REST API)
+    │   ├── 📁 helloapp/       # Django 앱 (Hello World)
+    │   ├── 📁 pythonLM/       # Django 설정
+    │   ├── 📄 manage.py       # Django 관리 스크립트
+    │   └── 📄 db.sqlite3      # 데이터베이스
+    └── 📁 frontend/           # Next.js 프론트엔드
+        ├── 📁 pages/          # Next.js 페이지들
+        ├── 📁 src/            # React 컴포넌트들
+        ├── 📁 public/         # 정적 파일들
+        ├── 📄 package.json    # Node.js 의존성
+        └── 📁 node_modules/   # Node.js 패키지들
+```
+
 ```
 # 장고 설치
 pip install django  
@@ -9,16 +32,16 @@ django-admin --version
 
 # dango 프로젝트 시작
 django-admin startproject [name] [path]  
-django-admin startproject pythonLM .
-ㄴ 새 디렉터리가 Django 프로젝트의 기본 구조와 함께 생성
+django-admin startproject pythonLM backend
+ㄴ backend 폴더에 Django 프로젝트 생성
 
 # 개발 서버를 실행
-cd pythonLM 
+cd pythonLM/backend
 python manage.py runserver
  
 # hello world
 python manage.py startapp helloapp
-- helloapp/veiws.py
+- helloapp/views.py
 - pythonLM/settings.py
 - pythonLM/urls.py
 ```
@@ -47,20 +70,19 @@ python manage.py runserver
 ```
 # frontend 폴더 생성
 mkdir -p frontend
+cd frontend
 
-#  npx로 리액트 프로젝트 생성
-npx create-react-app bookreview
+# Next.js 프로젝트 초기화
+npm init -y
+npm install next react react-dom
 
-# 리액트 프로젝트 시작
-npm start
-
-# Next.js 설치
-npm install --save next react react-dom
-
-# package.json 설정
-- scripts 추가
+# package.json scripts 수정
+- "dev": "next dev"
+- "build": "next build"
+- "start": "next start"
 
 # pages 폴더 생성
-mkdir pages | cd pages
+mkdir pages
+cd pages
 touch index.js
 ```
