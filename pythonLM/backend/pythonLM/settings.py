@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "helloapp",
     "bookreview",
     "rest_framework",
+    "jazzclub"
 ]
 
 MIDDLEWARE = [

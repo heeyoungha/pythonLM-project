@@ -26,4 +26,5 @@ urlpatterns = [
     path("hello/", hello),
     path("api/hello/", hello_rest_api, name="hello_rest_api"),
     path("api/bookreview/", include('bookreview.urls')),
+    path("api/jazzclub/", include('jazzclub.urls')),
 ]
