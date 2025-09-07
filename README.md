@@ -86,3 +86,24 @@ mkdir pages
 cd pages
 touch index.js
 ```
+# 독후감 게시판 (Bookclub)
+```
+- models.py : 모델 정의 
+   - python manage.py makemigrations : 마이그레이션 파일 생성
+   - python manage.py migrate : DB에 반영
+- settings.py : 앱 등록
+- urls.py : url 경로와 view 연결
+- views.py : 비즈니스 로직
+   - 쿼리셋, 권환 설정
+   - get_serializer_class : 액션에 따라 다른 시리얼라이저 사용
+   - perform_create : 작성자 정보 추가
+   - perform_destroy : 소프트 삭제 구현
+- serializers.py : 모델 <-> JSON 변환 담당
+- 테스트
+   - 127.0.0.1:8000/api/bookreview/pk 
+   - sqlite3 db.sqlite3
+      - .headers on
+      - select * from bookreview;
+   - 디비버
+      - 파일 경로 : /pythonLM/pythonLM/backend/db.sqlite3
+```

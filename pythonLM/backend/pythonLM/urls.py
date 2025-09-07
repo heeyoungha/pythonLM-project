@@ -16,7 +16,7 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 from bookreview.views import hello_rest_api
 from helloapp.views import hello
@@ -25,4 +25,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("hello/", hello),
     path("api/hello/", hello_rest_api, name="hello_rest_api"),
+    path("api/bookreview/", include('bookreview.urls')),
 ]
