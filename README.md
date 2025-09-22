@@ -1,7 +1,10 @@
 # 📘 PythonLM 성장 로드맵
 
 이 프로젝트는 **Django + DRF + React/Next.js** 기반으로, 단계별로 기능을 확장하며 학습과 실습을 병행하는 로드맵을 따릅니다.  
-각 step은 별도의 브랜치로 관리되며, 해당 브랜치의 README에서 상세 구현 내용을 확인할 수 있습니다.  
+프로젝트는 각 단계별 별도의 브랜치로 기능을 확장하며, 학습 내용을 정리하는 방식으로 진행됩니다.
+
+이 프로젝트가 지향하는 서비스 화면 예시입니다.
+<img width="1023" height="779" alt="Image" src="https://github.com/user-attachments/assets/19b53230-ebe6-4dbb-9f79-8639571a2c5c" />
 
 ---
 
